@@ -20,21 +20,33 @@ img {
     box-shadow: 3px 3px #333333;
 }
 
-span {
-    color: black;
-    text-decoration: underline;
+a {
+    display: block;
+}
+
+#randomizer, #cuisine-search {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 45%;
+    padding: 20px;
+    
 }
 
 button, input {
     border: none;
-    height: 30px;
+    height: 100px;
     margin-top: 20px;
+    font-size: xx-large;
 }
 
 button {
     background-color:  rgb(143, 10, 10);
     box-shadow: 2px 2px #333333;
     color: white;
+    padding: 30px;
 }
 
 input {
