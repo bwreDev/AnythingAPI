@@ -3,7 +3,12 @@
 }
 
 body {
-    background-color: #dacfcf; 
+    padding: 0%;
+    background-image: url('cuttingboard.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 2px  black;
 }
 
 header {
@@ -12,16 +17,15 @@ header {
     text-shadow: 2px 2px rgb(58, 15, 15);
     text-align: center;
     font-size: xx-large;
-    padding: 10%;
-    box-shadow: 3px 3px #333333;
+    box-shadow: 3px 3px 3px #333333;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
 }
 
 img {
-    box-shadow: 3px 3px #333333;
-}
-
-a {
-    display: block;
+    box-shadow: 3px 3px 3px #333333;
+    margin-left: 10%;
 }
 
 #randomizer, #cuisine-search {
@@ -32,7 +36,6 @@ a {
 input {
     width: 45%;
     padding: 20px;
-    
 }
 
 button, input {
@@ -40,6 +43,7 @@ button, input {
     height: 100px;
     margin-top: 20px;
     font-size: xx-large;
+    border-radius: 10px 10px 10px 10px;
 }
 
 button {
@@ -49,18 +53,33 @@ button {
     padding: 30px;
 }
 
+#cuisine-submit {
+    margin-left: 20px;
+}
+
 input {
     box-shadow: 2px 2px #333333;
 }
 
-ul {
+#results-list {
     list-style: none;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 p {
     line-height: 30px;
-    margin-right: 50%;
+    padding-right: 33%;
+    padding-left: 33%;
+}
+
+h2 {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.ingredients {
+    margin-left: 5%;
 }
 
 .hidden {

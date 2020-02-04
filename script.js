@@ -1,5 +1,25 @@
 'use strict';
 
+const placeholders = ['Chinese..', 'Mexican..', 'American..', 'Mediterranean..', 'Southern..',
+    'French..', 'Greek..'];
+let counter = 0;
+let inquire = document.getElementById('cuisine-input');
+let length = placeholders.length;
+
+function changePlaceholder() {
+
+
+    if (counter >= length) {
+        counter = 0;
+    }
+
+    inquire.setAttribute('placeholder', placeholders[counter]);
+    counter++;
+
+}
+
+setInterval(changePlaceholder, 3000);
+
 
 function displayRandomResults(responseJson) {
     $('#results-list').empty();
@@ -10,10 +30,9 @@ function displayRandomResults(responseJson) {
     $('#results-list').append(
         `<li><h2>${responseJson.recipes[0].title}</h2></li>
         <a href="${responseJson.recipes[0].sourceUrl}" target="_blank"><img src="${responseJson.recipes[0].image}" 
-        alt="Photo of ${responseJson.recipes[0].title}"/><br>
-        <span>*Click image for blog post*</span>
+        alt="Photo of ${responseJson.recipes[0].title}"/>
         </a>
-        <ul>
+        <ul class="ingredients">
         ${ingredients.join('')}
         </ul>
         <li><p>${responseJson.recipes[0].instructions}</p></li>`
@@ -25,15 +44,14 @@ function displayCuisineResults(responseJson) {
     $('#results-list').empty();
     const ingredients = [];
     for (let i = 0; i < responseJson.extendedIngredients.length; i++) {
-            ingredients.push(`<li>${responseJson.extendedIngredients[i].original}</li>`);
+        ingredients.push(`<li>${responseJson.extendedIngredients[i].original}</li>`);
     }
     $('#results-list').append(
         `<li><h2>${responseJson.title}</h2></li>
         <a href="${responseJson.sourceUrl}" target="_blank"><img src="${responseJson.image}" 
-        alt="Photo of ${responseJson.title}"/><span>*Click image for blog post*</span>
+        alt="Photo of ${responseJson.title}"/>
         </a>
-        <ul>
-        <p>Ingredients:</p>
+        <ul class="ingredients">
         ${ingredients.join('')}
         </ul>
         <li><p>${responseJson.instructions}</p></li>`
