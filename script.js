@@ -35,7 +35,7 @@ function displayRandomResults(responseJson) {
         <ul class="ingredients">
         ${ingredients.join('')}
         </ul>
-        <li><p>${responseJson.recipes[0].instructions}</p></li>`
+        <li><pre>${responseJson.recipes[0].instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>`
     )
     $('#results').removeClass('hidden');
 }
@@ -54,7 +54,7 @@ function displayCuisineResults(responseJson) {
         <ul class="ingredients">
         ${ingredients.join('')}
         </ul>
-        <li><p>${responseJson.instructions}</p></li>`
+        <li><pre>${responseJson.instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>`
     )
     $('#results').removeClass('hidden');
 }

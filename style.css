@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border: 2px solid magenta;
 }
 
 body {
@@ -8,10 +9,11 @@ body {
     background-attachment: fixed;
     background-size: cover;
     color: white;
-    text-shadow: 2px 2px 2px  black;
+    font-family: 'Cabin', sans-serif;
 }
 
 header {
+    font-family: 'BioRhyme', serif;
     background-color: rgb(143, 10, 10);
     color: white;
     text-shadow: 2px 2px rgb(58, 15, 15);
@@ -25,7 +27,8 @@ header {
 
 img {
     box-shadow: 3px 3px 3px #333333;
-    margin-left: 10%;
+    max-width: 500px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 #randomizer, #cuisine-search {
@@ -67,19 +70,38 @@ input {
     flex-wrap: wrap;
 }
 
-p {
+pre {
     line-height: 30px;
-    padding-right: 33%;
-    padding-left: 33%;
+    max-width: 700px;
+    background-color: #ffffff;
+    color: black;
+    white-space: pre-wrap;
+    padding: 20px;
 }
 
 h2 {
-    padding-left: 20%;
-    padding-right: 20%;
+    font-size: xx-large;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 10px 10px 10px 10px;
+}
+
+a {
+    margin: auto;
+}
+
+li {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ingredients {
-    margin-left: 5%;
+    max-width: 300px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 10px 10px;
+    padding-top: 10px;
+    line-height: 20px;
 }
 
 .hidden {
