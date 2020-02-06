@@ -28,10 +28,10 @@ function displayRandomResults(responseJson) {
         ingredients.push(`<li>${responseJson.recipes[0].extendedIngredients[i].original}</li>`);
     }
     $('#results-list').append(
-        `<li><h2>${responseJson.recipes[0].title}</h2></li>
+        `<li><h2>${responseJson.recipes[0].title}</h2>
         <a href="${responseJson.recipes[0].sourceUrl}" target="_blank"><img src="${responseJson.recipes[0].image}" 
         alt="Photo of ${responseJson.recipes[0].title}"/>
-        </a>
+        </a></li>
         <ul class="ingredients">
         ${ingredients.join('')}
         </ul>
@@ -47,10 +47,10 @@ function displayCuisineResults(responseJson) {
         ingredients.push(`<li>${responseJson.extendedIngredients[i].original}</li>`);
     }
     $('#results-list').append(
-        `<li><h2>${responseJson.title}</h2></li>
+        `<li><h2>${responseJson.title}</h2>
         <a href="${responseJson.sourceUrl}" target="_blank"><img src="${responseJson.image}" 
         alt="Photo of ${responseJson.title}"/>
-        </a>
+        </a></li>
         <ul class="ingredients">
         ${ingredients.join('')}
         </ul>

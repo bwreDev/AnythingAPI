@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    border: 2px solid magenta;
 }
 
 body {
@@ -8,27 +7,16 @@ body {
     background-image: url('cuttingboard.jpg');
     background-attachment: fixed;
     background-size: cover;
-    color: white;
+    color: black;
     font-family: 'Cabin', sans-serif;
 }
 
 header {
     font-family: 'BioRhyme', serif;
-    background-color: rgb(143, 10, 10);
-    color: white;
-    text-shadow: 2px 2px rgb(58, 15, 15);
+    background-color: whitesmoke;
     text-align: center;
     font-size: xx-large;
-    box-shadow: 3px 3px 3px #333333;
-    margin-left: auto;
-    margin-right: auto;
-    width: 33%;
-}
-
-img {
-    box-shadow: 3px 3px 3px #333333;
-    max-width: 500px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 33px 33px 33px 33px;
 }
 
 #randomizer, #cuisine-search {
@@ -37,74 +25,86 @@ img {
 }
 
 input {
-    width: 45%;
+    width: 50%;
     padding: 20px;
 }
 
 button, input {
     border: none;
     height: 100px;
-    margin-top: 20px;
-    font-size: xx-large;
+    font-size: x-large;
     border-radius: 10px 10px 10px 10px;
+    margin: 5px;
 }
 
 button {
-    background-color:  rgb(143, 10, 10);
-    box-shadow: 2px 2px #333333;
-    color: white;
-    padding: 30px;
+	padding: 10px 14px;
+	text-decoration: none;
+	font-size: 30px;
+	background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
 }
 
-#cuisine-submit {
-    margin-left: 20px;
-}
-
-input {
-    box-shadow: 2px 2px #333333;
+button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #results-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    padding: 0%;
+    justify-content: center;
+    margin: auto;
+}
+
+li {
+    margin: 10px;
 }
 
 pre {
     line-height: 30px;
     max-width: 700px;
-    background-color: #ffffff;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
     white-space: pre-wrap;
     padding: 20px;
+    font-size: larger;
+    border-radius: 10px 10px 10px 10px;
 }
 
 h2 {
     font-size: xx-large;
-    background-color: #ffffff;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px 10px 10px 10px;
+    text-align: center;
 }
 
-a {
-    margin: auto;
-}
-
-li {
-    margin-left: auto;
-    margin-right: auto;
+img {
+    box-shadow: 3px 3px 3px #333333;
+    max-width: 350px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .ingredients {
     max-width: 300px;
-    background-color: #ffffff;
-    color: black;
     border-radius: 10px 10px;
     padding-top: 10px;
-    line-height: 20px;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .hidden {
     display: none;
 }
 
+@media screen and (min-width: 600px){
+    img {
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    img {
+        max-width: 1000px;
+    }
+}
