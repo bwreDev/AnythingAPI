@@ -1,6 +1,7 @@
 # AnythingAPI
-Using Spoonaculars API for recipe searches, this is a random recipe search engine for users who have a hard 
-time deciding on what to make.
+Anything. The helpful recipe generator. 
+Using Spoonaculars recipe API, I've built a simple random recipe generator using html, css, javascript, and jquery. 
 
-When you ask someone what they want to eat, and they respond with "anything." Here is where you can find,
-literally, anything.
+This is designed for people who have a hard time deciding on a meal for any occasion, and if you are craving something a little more particular, you can input a type of cuisine into the search bar and it will bring you a random recipe of that style.
+
+![](Anything.PNG)

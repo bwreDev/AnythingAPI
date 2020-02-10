@@ -33,9 +33,10 @@ function displayRandomResults(responseJson) {
         alt="Photo of ${responseJson.recipes[0].title}"/>
         </a></li>
         <ul class="ingredients">
+        <h3>Ingredients:</h3>
         ${ingredients.join('')}
         </ul>
-        <li><pre>${responseJson.recipes[0].instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>`
+        <li><pre><h3>Instructions:</h3>${responseJson.recipes[0].instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>`
     )
     $('#results').removeClass('hidden');
 }
@@ -52,9 +53,10 @@ function displayCuisineResults(responseJson) {
         alt="Photo of ${responseJson.title}"/>
         </a></li>
         <ul class="ingredients">
+        <h3>Ingredients:</h3>
         ${ingredients.join('')}
         </ul>
-        <li><pre>${responseJson.instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>`
+        <li><pre><h3>Instructions:</h3>${responseJson.instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>`
     )
     $('#results').removeClass('hidden');
 }
