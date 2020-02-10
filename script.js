@@ -7,15 +7,11 @@ let inquire = document.getElementById('cuisine-input');
 let length = placeholders.length;
 
 function changePlaceholder() {
-
-
     if (counter >= length) {
         counter = 0;
     }
-
     inquire.setAttribute('placeholder', placeholders[counter]);
     counter++;
-
 }
 
 setInterval(changePlaceholder, 3000);
@@ -36,7 +32,7 @@ function displayRandomResults(responseJson) {
         <h3>Ingredients:</h3>
         ${ingredients.join('')}
         </ul>
-        <li><pre><h3>Instructions:</h3>${responseJson.recipes[0].instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>`
+        <li><pre><h3>Instructions:</h3>${responseJson.recipes[0].instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>` //regex added to alter large string to better format
     )
     $('#results').removeClass('hidden');
 }
@@ -56,7 +52,7 @@ function displayCuisineResults(responseJson) {
         <h3>Ingredients:</h3>
         ${ingredients.join('')}
         </ul>
-        <li><pre><h3>Instructions:</h3>${responseJson.instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>`
+        <li><pre><h3>Instructions:</h3>${responseJson.instructions.replace(/(?:\r\n|\r|\n|     |\.)/g, '<br>')}</pre></li>` //regex added to alter large string to better format
     )
     $('#results').removeClass('hidden');
 }
@@ -74,7 +70,7 @@ function watchCuisineButton() {
 
 function getCuisineResults(responseJson) {
     $('#results-list').empty();
-    const i = Math.floor(Math.random() * 9);
+    const i = Math.floor(Math.random() * 9); //Random number generator to get a random recipe out of the ten returned.
     const recipeId = `${responseJson.results[i].id}`;
     getRecipeById(recipeId);
 }
